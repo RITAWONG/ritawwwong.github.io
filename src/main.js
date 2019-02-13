@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import Highlight from 'vue-markdown-highlight'
+
+Vue.use(Highlight);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

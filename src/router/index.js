@@ -1,15 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+import blogRoutes from './blog';
+
+Vue.use(Router);
+
+const defaultRoutes = [
+  {
+    path: '/',
+    name: '',
+    redirect: '/blog/digest'
+  }
+];
+
+const routes = defaultRoutes.concat(blogRoutes);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+  routes: routes
 })
